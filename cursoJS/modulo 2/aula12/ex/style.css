@@ -1,0 +1,13 @@
+body{
+    background-color: blueviolet;
+}
+.local{
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    border-radius: 4px;
+    width: 700px;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+}
