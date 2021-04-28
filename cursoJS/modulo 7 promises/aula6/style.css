@@ -1,0 +1,18 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: aqua;
+}
+
+section{
+    margin: 20 auto;
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+    background: white;
+}
+table{
+    width: 100%;
+}

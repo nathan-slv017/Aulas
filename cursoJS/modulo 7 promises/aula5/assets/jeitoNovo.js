@@ -1,4 +1,3 @@
- // console.warn(e) para deixar amarelinho / console.error(e) deixa vermelho
 document.addEventListener('click', e =>{
   const el = e.target
   const tag = el.tagName.toLowerCase();
@@ -19,7 +18,6 @@ async function carregaPagina(el){
     const html = await response.text();
     carregaResultado(html)
 
-
   }catch(e) {
     console.log(e)}
     
@@ -29,3 +27,4 @@ function carregaResultado(response) {
   const resultado = document.querySelector('.resultado');
   resultado.innerHTML = response;
 }
+ // console.warn(e) para deixar amarelinho / console.error(e) deixa vermelho // console.warn(e) para deixar amarelinho / console.error(e) deixa vermelho
