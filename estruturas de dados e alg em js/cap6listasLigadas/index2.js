@@ -118,10 +118,19 @@ class LinkedList {
     }
 }
 
-const list = new LinkedList();
-list.push(15);
-list.push(20);
-list.push(29);
-list.removeAt(0)
-console.log(list);
 
+
+//lista duplamente ligadas
+
+class DoublyNode extends Node {
+    constructor(element, next, prev){
+        super(element, next)
+        this.prev = prev
+    }
+}
+class DoublyLinkedList extends LinkedList {
+    constructor(equalsFn = defaultEquals){
+        super(equalsFn)
+        this.tail = undefined;
+    }
+}
