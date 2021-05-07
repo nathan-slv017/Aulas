@@ -1,35 +1,35 @@
 class Stack {
-    constructor(){
+    constructor() {
         this.count = 0;
-        this.items = [];
+        this.items = {};
     }
     // methods
 
-    push(element){
+    push(element) {
         this.items[this.count] = element
-        this.count ++;
+        this.count++;
     }
 
-    size(){
+    size() {
         return this.count
     }
 
-    isEmpty(){
+    isEmpty() {
         return this.count === 0;
     }
 
-    pop(){
-        if(this.isEmpty())return undefined
-        
-        this.count --;
-        const result = this.items[this.count];
+    pop() {
+        if (this.isEmpty()) {
+            return undefined
+        }
+        this.count--;
+        const resultado = this.items[this.count];
         delete this.items[this.count];
-        return result
+        return resultado
     }
 
-    peek(){
-        if(this.isEmpty()) return undefined
-
+    peek() {
+        if (this.isEmpty()) { return undefined; }
         return this.items[this.count - 1]
     }
 
@@ -38,24 +38,23 @@ class Stack {
         this.items = [];
     }
 
-    clearAll(){
-        while(!this.isEmpty()){
-            this.pop();
+    clearAll() {
+        while (!this.isEmpty()) {
+            this.pop()
         }
+
     }
 
-    toString(){
+    toString() {
         if(this.isEmpty()){
-            return '';
+            return ''
         }
-
         let objString = `${this.items[0]}`
-        for(let i = 1; j< this.count; i ++){
-            objString = `${objString}, ${this.items[i]}`
+        for(let i = 0; i < this.items; i ++){
+            objString = `${objString}, ${this.items[0]}`
         }
-        return objString;
     }
-    
+
 }
 
 const stack = new Stack();

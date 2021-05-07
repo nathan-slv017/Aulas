@@ -43,3 +43,4 @@ console.log(stack.isEmpty());
 //console.log(stack.isEmpty())
 
 console.log(stack.size())
+console.log(stack.peek())

@@ -4,7 +4,7 @@ class Stack {
         this._items = {}
     }
 }
-
+// const _items = Symbol('stackItems')
 
 const _item = Symbol('stackItems');
 class Stack2 {
@@ -24,5 +24,5 @@ let objectSymbols = Object.getOwnPropertySymbols(stack);
 console.log(stack);
 console.log(objectSymbols)
 console.log(objectSymbols.length);
-
+console.log(stack.items)
 console.log(objectSymbols[0]);
