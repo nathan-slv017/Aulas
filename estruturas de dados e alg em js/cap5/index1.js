@@ -1,55 +1,50 @@
-// Criando a classe Queue igual a stack
-
 class Queue{
     constructor(){
-        this.count = 0;
-        this.lowestCount =0;
+        this.count = 0
+        this.lowestCount  = 0
         this.items = {};
     }
-    isEmpyt(){
-        return this.count - this.lowestCount === 0 ? true : false
-
+    isEmpty(){
+        this.count === 0
     }
     enqueue(element){
-        this.items[this.count] = element;
+        this.items[this.count] = element
         this.count ++
     }
     dequeue(){
-        if(this.isEmpyt()){
+        if(this.isEmpty()){
             return undefined
         }
-        const result = this.items[this.lowestCount];
+        const result = this.items[this.lowestCount]
         delete this.items[this.lowestCount];
         this.lowestCount ++
-        return result;
+        return result
     }
     peek(){
-        if(this.isEmpyt()){
-            return undefined;
+        if(this.isEmpty){
+            return undefined
         }
-        return this.items[this.lowestCount];
+        return this.items[this.lowestCount]
     }
     size(){
-        return this.count - this.lowestCount;
+        if(this.isEmpty){
+            return undefined
+        }
+        return this.count - this.lowestCount
     }
     clear(){
         this.count = 0;
-        this.lowestCount = 0;
-        this.items = {}
+        this.items = {};
+        this.lowestCount = 0
     }
     toString(){
-        if(this.isEmpyt()){
+        if(this.isEmpty()){
             return ''
         }
-
-        let objString = `${this.items[this.lowestCount]}`;
-        for( let i = this.lowestCount + 1; i < this.count; i++){
+        let objString = `${this.items[this.lowestCount]}`
+        for( let i = 0; i < this.count + this.lowestCount; i++){
             objString = `${objString}, ${this.items[i]}`
         }
-        return objString;
+        return objString
     }
 }
-
-const queue = new Queue()
-
-console.log(queue.isEmpyt())

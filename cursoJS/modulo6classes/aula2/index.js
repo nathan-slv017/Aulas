@@ -1,4 +1,5 @@
 // gettters e setters
+const _devagar = Symbol('devagar');
 
 const _velocidade = Symbol('velocidade') // criando uma const que não pode ser modificada fora dos metodos
 class Carro {
@@ -35,4 +36,5 @@ for(let i = 0; i < 200; i++){
 }
 
 c1.velocidade = 10;
+
 console.log(c1.velocidade)

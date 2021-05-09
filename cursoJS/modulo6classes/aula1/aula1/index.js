@@ -19,3 +19,4 @@ class Pessoa {
 // já vai adicionar os metodos para o prototype automaticamente
 const p1 = new Pessoa('nathan', 'silva');
 const p2 = new Pessoa('Luiz' , 'MEME');
+p1.beber()
