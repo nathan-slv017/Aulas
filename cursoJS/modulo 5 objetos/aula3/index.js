@@ -13,10 +13,10 @@ function Produto(nome, preco, estoque){
             if(typeof valor !== 'number'){
                 throw new TypeError('Bug na matriz');
             }
-            estoquePrivado = value
+            estoquePrivado = value;
         }
     })
 }
 const p1 = new Produto('Camiseta', 20, 3);
-p1.estoque = 400
+p1.estoque = 400;
 console.log(p1.estoque);

@@ -21,6 +21,8 @@ function Pessoa(nome, sobrenome){
 const p2 = new Pessoa('João', 'Correia');
 p2.nome = 'Novo João';
 console.log(p2);
+
+
 // p2 = (endereco de memoria) -> 'valor' 
 // o ' valor ' é possivel modificar na const..
 // p2 = enderecodememoria = {nome: 'outroJoao'};
