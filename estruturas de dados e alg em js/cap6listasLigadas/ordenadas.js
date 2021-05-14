@@ -116,6 +116,70 @@ class LinkedList {
         return objString;
     }
 }
+ 
+class DoublyLinkedList extends LinkedList {
+    constructor(equalsFn = defaultEquals) {
+        super(equalsFn);
+        this.tail = undefined;
+    }
+
+    insert(element, index) {
+        if (index >= 0 && index <= this.count) {
+            const node = new DoublyNode(element);
+            let current = this.head
+            if (index === 0) {
+                if (this.head == null) {
+                    this.head = node;
+                    this.tail = node;
+                } else {
+                    node.next = current;
+                    current.prev = node;
+                    this.head = node;
+                }
+            } else if (index === this.count) {
+                current = this.tail;
+                current.next = node;
+                node.prev = current;
+                this.tail = node;
+            } else {
+                const previous = this.getElementAt(index);
+                current = previous.next;
+                node.next = current;
+                previous.next = node;
+                current.prev = node;
+                node.prev = previous
+            }
+            this.count++
+            return true
+        }
+        return false
+    }
+
+    removeAt(index) {
+        if (index >= 0 && index <= this.count) {
+            let current = this.head;
+            if (index === 0) {
+                this.head = current.next
+                if (this.count === 1) {
+                    this.tail = undefined;
+                } else {
+                    this.head.prev = undefined;
+                }
+
+            } else if (index === this.count - 1) {
+                current = this.tail;
+                this.tail = current.prev;
+                this.tail.next = undefined;
+            } else {
+                current = this.getElementAt(index);
+                const previous = current.prev;
+                previous.next = current.next;
+                current.next.prev = previous;
+            }
+        }
+        return undefined
+    }
+}
 
 class SortedLinkedList extends LinkedList{
     constructor(equalsFn = defaultEquals, compareFn = defaultCompare) {
@@ -140,5 +204,39 @@ class SortedLinkedList extends LinkedList{
             current = current.next ;
         }
         return i;
+    }
+}
+
+class StackLinkedList {
+    constructor() {
+        this.items = new DoublyLinkedList();
+    }
+    push(element) {
+        this.items.push(element);
+    }
+    pop(){
+        if(this.isEmpty()){
+            return undefined;
+        }
+        return this.items.removeAt(this.size() -1);
+    }
+
+    peek(){
+        if(this.isEmpty()) {
+            return undefined;
+        }
+        return this.items.getElementAt(this.size() -1).element;
+    }
+    isEmpty() {
+        return this.items.isEmpty();
+    }
+    size() {
+        return this.items.size();
+    }
+    clear() {
+        this.items.clear
+    }
+    toString(){
+        return this.items.toString();
     }
 }
