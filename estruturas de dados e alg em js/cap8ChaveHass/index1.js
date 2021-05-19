@@ -84,7 +84,7 @@ class Dictionary {
     }
 
     values(){
-        return this.keyValue.map(valuePair => valuePair.value);
+        return this.keyValue().map(valuePair => valuePair.value);
     }
 
     size(){
@@ -126,12 +126,8 @@ dictionary.set('Nathan', 'emaildonnatan@gmail.com');
 dictionary.set('João', 'JoaozinReiDelas@gmail.com');
 dictionary.set('Paula', 'paulinha@gmail.com');
 
-console.log(dictionary.hasKey('Nathan'));
-console.log(dictionary.size());
-console.log(dictionary.keys2());
-console.log(dictionary.remove('Nathan'));
-console.log(dictionary.get('Paula'));
 console.log(dictionary.keyValue());
+console.log(dictionary.values());
 dictionary.forEach((k, v) =>{
-    console.log('forEach: ', `key: ${k}, value: ${v}`);
+    console.log(`o nome de usuario é:'${k}' e o email é:'${v}'`);
 })
