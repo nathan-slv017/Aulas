@@ -92,5 +92,5 @@ function palindromeChecker(aString) {
             isEqual = false
         }
     }
-    return isEqual
+    return isEqual;
 }

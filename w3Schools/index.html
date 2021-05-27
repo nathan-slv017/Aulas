@@ -1,0 +1,63 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+        #animation{
+            background: red;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>my First JavaScript Animation</h1>
+    <div id="containe">
+        <div id="animation">My animation will go here</div>
+    </div>
+    <input type="text" class="fname" onchange="ya()">
+    <h1 onclick="changeText(this)">Clique aki gay</h1>
+    <script>
+        function changeText(id){
+            console.log(id);
+            id.innerHTML = 'pqp em';
+        }
+
+        function ya(){
+        let x = document.querySelector('.fname')
+        x.value.toUpperCase();
+        }
+
+        let id = null;
+        function myMove(){
+            let elem = document.getElementById('animation');
+            let pos = 0
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame(){
+                if(pos === 350){
+                    clearInterval(id);
+                } else{
+                    pos++;
+                    elem.style.left = pos + 'px';
+                    elem.style.top = pos + 'px'
+                }
+            }
+            
+        }
+        (myMove())()
+    </script>
+</body>
+
+</html>
