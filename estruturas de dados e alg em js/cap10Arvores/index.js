@@ -82,20 +82,20 @@ export default class BinarySearchTree{
     min(){
         return this.minNode(this.root);
     }
-    minNode() {
+    minNode(node) {
         let current = node;
         while (current != null && current.left != null) {
             current = current.left;
         }
-        return current
+        return current;
     }
     max(){
         return this.maxNode(this.root);
     }
-    maxNode(){
+    maxNode(node){
         let current = node;
         while (current != null && current.right != null) {
-            current = current.right;
+           current = current.right;
         }
         return current;
     }

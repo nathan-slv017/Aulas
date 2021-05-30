@@ -98,4 +98,4 @@ class AVLTree extends BinarySearchTree{
         }
         return node;
     }
-}
+};
