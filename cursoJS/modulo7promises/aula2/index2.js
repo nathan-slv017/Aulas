@@ -1,4 +1,5 @@
 //metodos de promise (Promise.all, Promise.race, Promise.resolve, Promise.reject)
+// revendo promisses
 
 function rand(min, max){
     min *= 1000;
