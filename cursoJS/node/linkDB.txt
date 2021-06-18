@@ -1,0 +1,1 @@
+mongodb+srv://nathan-slv017:<password>@cursojs1.gf43q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
