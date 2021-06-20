@@ -1,0 +1,14 @@
+<% Controle de fluxo (if, for, while) %>
+
+<%= Imprime escando caracteres %>
+
+<%- Imprime sem escarar caracteres %>
+
+<%# Comentaios %>
+
+<%- include('CAMINHO ARQUIVO'); %>
+
+
+<% if(bla bla ) { %>
+<%= obla bla %>
+<% } %>

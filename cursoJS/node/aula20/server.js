@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.CONNECTIONSTRING, {useNewUrlParser: true, useUnifiedTopology: true })
@@ -11,21 +10,26 @@ mongoose.connect(process.env.CONNECTIONSTRING, {useNewUrlParser: true, useUnifie
     })
     .catch( e => console.log(e));
 
-const routes = require('./routes')
+const routes = require('./routes');
 const path = require('path');
-const meuMiddleware = require('./src/middlewares/middleeware');
+const helmet = require('helmet');
+const csurf = require('csurf');
+const { middleewareGlobal, checksCsrfError, csfrMiddleware } = require('./src/middlewares/middleeware');
 
+
+app.use(helmet());
 app.use(express.urlencoded({ extended : true}));
-
 app.use(express.static(path.resolve(__dirname, 'public')));
-
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
-
+app.use(csurf);
 //Nossos próprios midllewares
-app.use(meuMiddleware);
+app.use(middleewareGlobal);
+app.use(checksCsrfError);
+app.use(csfrMiddleware);
 app.use(routes);
+
 
 app.on('pronto' ,() =>{
     app.listen(3000, () =>{
