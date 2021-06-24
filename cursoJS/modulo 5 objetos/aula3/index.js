@@ -2,7 +2,7 @@
 function Produto(nome, preco, estoque){
     this.nome = nome;
     this.preco = preco;
-    const estoquePrivado = estoque
+    let estoquePrivado = estoque
     Object.defineProperty(this, 'estoque', {
         enumerable: true,
         configurable: true,
@@ -10,7 +10,7 @@ function Produto(nome, preco, estoque){
             return estoquePrivado
         }, 
         set: function (value){
-            if(typeof valor !== 'number'){
+            if(typeof value != 'number'){
                 throw new TypeError('Bug na matriz');
             }
             estoquePrivado = value;

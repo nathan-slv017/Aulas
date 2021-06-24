@@ -1,7 +1,7 @@
 // defineProperty - defineProperties
 function Produto(nome, preco, estoque) {
     
-    
+
     Object.defineProperties(this, {
         nome:{
             enumerable: true,

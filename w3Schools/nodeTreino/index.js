@@ -1,15 +1,8 @@
-const path = require("path");
-
-console.log(process.env.PATH);
-console.log(path.resolve(__dirname, '..', '..'));
-console.log(path.extname('index.js'))
-const format = path.format({
-    root: '/ignored',
-    dir: '/home/user/dir',
-    base:'file.txt'
-})
-console.log(format)
-
-console.log(path.isAbsolute('/bar/'));
-console.log(path.join('/foo', 'bar'));
-console.log(path.parse('/home/user/dir/file.txt'));
+const path = require('path');
+const fs = require('fs');
+const rs = fs.createReadStream('./demofile.txt');
+rs.on('open', function () {
+    console.log('the file is open');
+});
+const events = require('events');
+const eventEmitter = new events.EventEmitter()

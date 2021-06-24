@@ -14,3 +14,8 @@ const numerosPares = numeros.filter(function(valor) {
 // [ 24, 64, 20, 8, 12, 160 ] o dobro dos pares
 // 288 a soma dos valores
 console.log(numerosPares);
+
+
+const numeros1 = [3, 4, 5, 6, 7, 8, 10];
+const numerosimpares = numeros1.filter(value => value % 2 > 0).map(value => value *2).reduce((ac, value) => ac + value);
+console.log(numerosimpares)

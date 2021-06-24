@@ -7,6 +7,7 @@ function ValidaCPF(cpfEnviado){
         }
     });
 }
+
 ValidaCPF.prototype.valida = function(){
     if(typeof this.cpfLimpo === 'undefined') return false;
     if(this.cpfLimpo.length !== 11) return false;
@@ -15,7 +16,7 @@ ValidaCPF.prototype.valida = function(){
     const cpfParcial = this.cpfLimpo.slice(0, -2);
     const digito1 = this.criaDigito(cpfParcial);
     const digito2 = this.criaDigito(cpfParcial + digito1)
-    
+    // uau 
     const novoCpf = cpfParcial + digito1 + digito2;
     
 
