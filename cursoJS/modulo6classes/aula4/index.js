@@ -36,4 +36,4 @@ ControleRemoto.trocaPilha(); // como se fosse Math.random()
 console.log(ControleRemoto.soma(20, 30));
 
 console.log(c1);
-test()// kk deu bósta
+// kk deu bósta

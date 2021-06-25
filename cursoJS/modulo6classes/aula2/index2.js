@@ -5,15 +5,15 @@ class Pessoa {
     }
 
     get nomeCompleto() {
-        return this.nome + ' ' + this.sobrenome
+        return this.nome + ' ' + this.sobrenome;
     }
     set nomeCompleto(valor){
         valor = valor.split(' ');
-        this.nome = valor.shift()
-        this.sobrenome = valor.join(' ')
+        this.nome = valor.shift();
+        this.sobrenome = valor.join(' ');
         
     }
 }
 const p1= new Pessoa('Luiz', 'Miranda');
-p1.nomeCompleto = 'Nathan Silva'
+p1.nomeCompleto = 'Nathan Silva';
 console.log(p1.nomeCompleto);

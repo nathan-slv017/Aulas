@@ -12,4 +12,4 @@ function appeBoxes(k){
     return red - yellow;
 }
 
-console.log(appeBoxes(1))
+console.log(appeBoxes(1));
