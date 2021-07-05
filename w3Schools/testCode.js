@@ -1,9 +1,10 @@
-function addBorder(picture){
-    let width = picture[0].length + 2
+const texto = 'nathan nathan naaaaathaaaannnnnnn apappapapa'
+// * 0 ou n 
+// + 1 ou n
+// ? 0 ou 1
+// \ caractere de escape
+// {n, m} {10,} {0, 10} {5, 10}
 
-    return [
-        "*".repeat(width),
-        ...picture.map(value => `"*${value}*"`),
-        "*".repeat(width)
-    ]
-}
+const regExp1 = /na+tha+n+/gi
+const regExp2 = /\.(jpg|jpeg)/g //ou outros arquivos
+console.log(texto.match());
