@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .loader-container{
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .loader {
+            border: 5px solid transparent;
+            border-radius: 50%;
+            animation: rotate 4s ease-in-out infinite;
+            position: absolute;
+        }
+        .load-1 {
+	border-top-color: rebeccapurple;
+	height: 200px;
+	width: 200px;
+	top: 0;
+	left: 0;
+}
+
+.load-2 {
+	border-top-color: orangered;
+	height: 250px;
+	width: 250px;
+	top: -25px;
+	left: -25px;
+	animation-duration: 2s;
+}
+
+
+.load-3 {
+	border-top-color: blue;
+	height: 300px;
+	width: 300px;
+	top: -50px;
+	left: -50px;
+	animation-duration: 1s;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="loader-container">
+        <div class="loader load-1"></div>
+        <div class="loader load-2"></div>
+        <div class="loader load-3"></div>
+    </div>
+
+</body>
+</html>
