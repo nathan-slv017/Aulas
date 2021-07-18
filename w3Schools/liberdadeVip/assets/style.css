@@ -1,0 +1,153 @@
+/* ajustes iniciais */
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x:hidden;    
+}
+
+
+/* contéudo da nav bar */
+.container-inicial{
+    background-color: white;
+    width: 100vw;
+    padding: 20px;
+    text-align: center;
+}
+.container-inicial a{
+    text-decoration: none;
+    color: #54595f;
+    font-family: "Lato", Sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    font-size: 14px;
+    padding: 13px 20px;
+}
+
+/* sessão de login ou cadastro */
+
+
+section{
+    margin-top: 100px;
+    height: 500px;
+    text-align: center;
+}
+
+section h1{
+    color: #fff;
+    font-family: playfair display,Sans-serif;
+    font-size: 69px;
+    font-weight: 400;
+    letter-spacing: -3.6px;
+}
+
+section h3 {
+    color: #858585;
+    font-size: 16px;
+}
+
+.login-btn button{
+    padding: 20px;
+    transition: all 0.5s;
+    font-size: 20px;
+}
+
+.cadastro{
+    margin: 20px;
+    width: 200px;
+    font-family: playfair display,Sans-serif;
+    background-color: #29c566;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #29c566;
+    color: white;
+}
+
+.login{
+    width: 168px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0 0 0 0;
+    color: white;
+    border-color:white ;
+}
+
+/* btn hover*/
+
+.cadastro:hover{
+    background-color: black;
+}
+
+.login:hover{
+    background-color: white;
+    color: #858585;
+}
+
+/* textos e imagens*/
+
+.container-article{
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+.imagen{
+    margin: 40px 0;
+    width: 50%;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+.pri-text{
+    background-position: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 50px;
+    padding: 20px;
+}   
+
+.pri-text h3 {
+    font-size: 39px;
+}
+.pri-text{
+    margin: 20px;
+    text-align: left;
+}
+
+.text{
+    width: 50%;
+    margin: 30px;
+    height: 400px;
+}
+
+.img1{
+    width: 50%;
+    height: 400px;
+    background-image: url('./../img/img1.1.jpg');
+    position: center;
+}
+
+.ti-one{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.img2{
+    margin: 40px 0;
+    width: 50%;
+    height: 400px;
+    background-image: url('./../img/img1.jpg');
+}
+
+.img3{
+    
+    background-image: url('./../img/img2.jpg');
+}
+
+
+.img4{
+
+    background-image: url('./../img/img3.jpg');
+}
