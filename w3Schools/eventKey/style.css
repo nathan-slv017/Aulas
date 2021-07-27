@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(225,225,225);
+}
+
+.menssage {
+    width: 600px;
+    height: 70px;
+    position: relative;
+    top: calc(50% - 35px);
+    left: calc(50% - 300px);
+    display: flex;
+    background-color: rgb(238,238,238);
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(153,153,153);
+    font-size: 22px;
+    font-weight: 600;
+}

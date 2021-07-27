@@ -1,0 +1,7 @@
+.ponteiro{
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(-70deg) translateY(30px);
+    margin: 0 auto;
+}
