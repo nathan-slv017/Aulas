@@ -1,4 +1,5 @@
 // gettters e setters
+// const _devagar = Symbol('devagar');
 const _devagar = Symbol('devagar');
 
 const _velocidade = Symbol('velocidade') // criando uma const que não pode ser modificada fora dos metodos

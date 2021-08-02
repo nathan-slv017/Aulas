@@ -6,10 +6,10 @@ class Pessoa {
         this.sobrenome = sobrenome;
     }
     fala() {
-
+        console.log('meu nome é ' + this.nome);
     }
     comer(){
-
+        console.log('eu ' + this.nome + ' estou comendo');
     }
     beber(){
         console.log(`${this.nome} esta comendo.`);
