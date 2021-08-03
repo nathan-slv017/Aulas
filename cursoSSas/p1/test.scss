@@ -1,0 +1,33 @@
+/*
+Error: Properties are only allowed within rules, directives, mixin includes, or other properties.
+        on line 2 of test.sass
+
+1: h1
+2: color: black
+
+Backtrace:
+test.sass:2
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/check_nesting.rb:15:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/check_nesting.rb:51:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/check_nesting.rb:59:in `visit_root'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/check_nesting.rb:17:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:24:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:35:in `css_tree'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:383:in `run'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:50:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:18:in `parse!'
+/usr/bin/sass:8:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Properties are only allowed within rules, directives, mixin includes, or other properties.\A         on line 2 of test.sass\A \A 1: h1\A 2: color: black"; }
