@@ -64,7 +64,9 @@ function getTrasnlateMap(x) {
         "e":"Suit"
     }
 
-    return obj[x.toLowerCase()] ?? 'x not found';
+    //return obj[x.toLowerCase()] ?? 'x not found';
+    return obj[x.toLowerCase()] ?? 'x not found'
+    
 }
 
 console.log(getTrasnlateMap('b'));
