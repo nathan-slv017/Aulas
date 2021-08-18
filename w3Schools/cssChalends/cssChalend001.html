@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css CHallenge</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(to right, #2c6fc7, #1c19c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullContainer {
+            margin-top: 200px;
+        }
+
+        .container {
+            width: 400px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .N-um {
+            display: flex;
+            left: 10px;
+            position: relative;
+        }
+
+        .tracoUm {
+            top: 14px;
+            left: 17px;
+            width: 50px;
+            height: 25px;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.959);
+            transform: rotate(-45deg);
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        .um {
+            width: 30px;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 4px;
+            z-index: 2;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.048);
+        }
+
+        .zeroUm {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.068);
+            z-index: 1;
+        }
+
+        .zeroUm:last-child {
+            position: relative;
+            left: -15;
+        }
+
+        .zeroUm:last-child {
+            z-index: 0;
+        }
+
+        .zeroUm div {
+            width: 50%;
+            height: 50%;
+            background-color: rgb(39, 52, 226);
+            border-radius: 50%;
+        }
+
+        /* phase */
+
+        .phase {
+            width: 430px;
+            height: 100px;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .phase div {
+            margin: 0;
+
+        }
+
+        .phase div:first-child {
+            font-size: 84px;
+            font-weight: 500;
+        }
+
+        .phase div:last-child {
+            font-size: 26px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fullContainer">
+        <div class="container">
+            <div class="N-um">
+                <div class="tracoUm"></div>
+                <div class="um"></div>
+            </div>
+            <div class="zeroUm">
+                <div></div>
+            </div>
+            <div class="zeroUm">
+                <div></div>
+            </div>
+        </div>
+        <div class="phase">
+            <div>
+                <div>DAYS</div>
+                <div>CSS CHALLENGE</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
