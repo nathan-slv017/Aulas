@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfil</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #786450;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(255, 241, 212);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .blocOne {
+            width: 250px;
+            height: 100%;
+            background-color: rgb(255, 241, 212);
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+
+
+        .perfil-photo {
+            width: 100px;
+            height: 100px;
+            background-image: url(./fotos/css006.jpeg);
+            background-size: cover;
+            margin-top: 10px;
+            border-radius: 50%;
+
+        }
+
+
+        .name {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        .name p {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .name div {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .buttons button {
+            margin: 10px;
+            width: 120px;
+            height: 30px;
+            background-color: initial;
+            border: 2px solid #786450;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: all 0.3s;
+            color: #786450;
+        }
+
+        button:hover {
+            background-color: #786450;
+            color: white;
+        }
+
+        /* bloco 2 */
+        .blocTwo {
+            width: 150px;
+            height: 100%;
+            background-color: #ebcbb4;
+        }
+
+        .blocTwo div {
+            height: calc(33% - 4px);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .blocTwo div p {
+            display: inline-block;
+            margin: 0 0;
+
+        }
+
+
+        .blocTwo div p:first-of-type {
+            font-size: 26px;
+        }
+
+        .blocTwo div p:last-of-type {
+            font-size: 12px;
+        }
+
+
+        .blocTwo div:read-only:nth-of-type(1),
+        .blocTwo div:read-only:nth-of-type(2) {
+            border-bottom: solid 1px rgb(255, 241, 212);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blocOne">
+
+            <div class="bord-foto">
+
+                <div class="perfil-photo"></div>
+            </div>
+
+            <div class="name">
+                <div></div>
+                <p>Nathan Silva</p>
+                <p>frontend programmer</p>
+            </div>
+
+
+            <div class="buttons">
+                <button>Follow</button>
+                <button>Message</button>
+            </div>
+
+        </div>
+        <div class="blocTwo">
+            <div>
+                <div></div>
+                <p>523</p>
+                <p>Posts</p>
+            </div>
+            <div>
+                <div></div>
+                <p>1387</p>
+                <p>Likes</p>
+            </div>
+            <div>
+                <div></div>
+                <p>146</p>
+                <p>follower</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

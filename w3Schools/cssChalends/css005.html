@@ -129,14 +129,34 @@
             top: -70px;
         }
 
+
+        .lines {
+            position: absolute;
+            width: 340px;
+            height: 110px;
+            top: -100px;
+        }
+
         .line {
             position: absolute;
         }
 
-        .line:nth-child(7) {
-            width: 100px;
+        .line:nth-child(1) {
+            left: -10px;
+            top: 65px;
+            width: 85px;
+            height: 4px;
+            rotate: -55deg;
             background-color: red;
-            height: 100px;
+        }
+
+        .line:nth-child(2) {
+            left: 55px;
+            top: 43px;
+            width: 53px;
+            height: 4px;
+            rotate: 23deg;
+            background-color: red;
         }
     </style>
 </head>
@@ -170,13 +190,15 @@
                     <div class="p"></div>
                     <div class="p"></div>
                     <div class="p"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                    <div class="lines">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                 </div>
                 <div class="week-days">
                     <div>MON</div>
