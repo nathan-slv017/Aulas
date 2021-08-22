@@ -1,0 +1,218 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #264057;
+        }
+
+        .container {
+            margin-top: 130px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: royalblue;
+            flex-direction: column;
+            box-shadow: 2px 4px 13px 1px black;
+        }
+
+        .init-bar {
+            width: 100%;
+            height: 25%;
+            display: flex;
+            align-self: center;
+            justify-content: space-between;
+        }
+
+        .init-bar button {
+            margin: 20px;
+            border: none;
+
+            width: 50px;
+            height: 30px;
+        }
+
+        .init-bar p {
+            font-size: 19px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .btn-menu {
+            display: flex;
+            background-color: royalblue;
+            cursor: pointer;
+        }
+
+        .btn-menu div {
+            transition: all 0.5s;
+        }
+
+        .btn-menu div:nth-child(1) {
+            margin-top: 1px;
+            width: 32px;
+            height: 7px;
+            border-radius: 4px;
+            background-color: rgb(129, 225, 238);
+        }
+
+        .btn-menu div:nth-child(2) {
+            margin-left: 1px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: rgb(129, 225, 238);
+        }
+
+        .btn-menu div:nth-child(3) {
+            position: absolute;
+            top: 175px;
+            width: 42px;
+            height: 7px;
+            border-radius: 4px;
+            background-color: rgb(129, 225, 238);
+            order: 3;
+        }
+
+        .search button {
+            color: rgb(94, 229, 247);
+            background-color: royalblue;
+            transition: all 0.5s;
+        }
+
+        .notifications {
+            width: 100%;
+            height: 85%;
+            display: flex;
+        }
+
+        .icons {
+            width: 20%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .not {
+            width: 80%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .bar {
+            width: 5px;
+            height: 24%;
+            margin: 0 auto;
+            background-color: rgb(230, 230, 230);
+            margin-top: 5px;
+        }
+
+        .boll {
+            background-color: rgb(85, 183, 248);
+            width: 10px;
+            height: 10px;
+            margin: 4 auto 0 auto;
+            border-radius: 50%;
+        }
+
+        .post p:nth-child(1) {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        .post p:nth-child(2) {
+            margin-bottom: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="init-bar">
+            <div>
+                <button class="btn-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <p>Notifications</p>
+
+            <div class="search">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="notifications">
+            <div class="icons">
+                <div class="bar"></div>
+                <div class="boll"></div>
+                <div class="bar"></div>
+                <div class="boll"></div>
+                <div class="bar"></div>
+                <div class="boll"></div>
+            </div>
+            <div class="not">
+                <div class="post">
+                    <p>9:23pm</p>
+                    <p>John Walker posted a photo on your wall.</p>
+                </div>
+                <div class="post">
+                    <p>8:19</p>
+                    <p>Alice Parker commented your last post.</p>
+                </div>
+                <div class="post">
+                    <p>yesterday</p>
+                    <p>Luke Wayne added you as friend</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btnMenu = document.querySelector('.btn-menu')
+        const btnSeach = document.querySelector('.search');
+
+        btnMenu.addEventListener('mouseover', () => {
+            document.querySelector('.btn-menu div:nth-child(1)').style.backgroundColor = 'white'
+            document.querySelector('.btn-menu div:nth-child(2)').style.backgroundColor = 'white'
+            document.querySelector('.btn-menu div:nth-child(3)').style.backgroundColor = 'white'
+        })
+
+        btnMenu.addEventListener('mouseout', () => {
+            document.querySelector('.btn-menu div:nth-child(1)').style.backgroundColor = 'rgb(129, 225, 238)'
+            document.querySelector('.btn-menu div:nth-child(2)').style.backgroundColor = 'rgb(129, 225, 238)'
+            document.querySelector('.btn-menu div:nth-child(3)').style.backgroundColor = 'rgb(129, 225, 238)'
+        })
+
+        btnMenu.addEventListener('click', () => {
+            console.log('Okay');
+        })
+
+
+        btnSeach.addEventListener('mouseover', (e) => {
+            document.querySelector('.search button').style.color = 'white'
+        })
+
+        btnSeach.addEventListener('mouseout', (e) => {
+            document.querySelector('.search button').style.color = 'rgb(94, 229, 247)'
+        })
+    </script>
+</body>
+
+</html>
