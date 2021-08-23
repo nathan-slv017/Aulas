@@ -1,0 +1,164 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: #fff;
+            color: #333;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            filter: contrast(100);
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Hierboven niets wijzigen */
+
+        .container {
+            background-color: black;
+        }
+
+        .container div {
+            filter: blur(5px);
+        }
+
+        .center {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center div {
+            position: absolute;
+        }
+
+        .circle {
+            border-radius: 50%;
+            background-color: white;
+            animation-name: rotation;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .circle-0 {
+            height: 100px;
+            width: 100px;
+        }
+
+        .circle-a {
+
+            height: 60px;
+            width: 60px;
+            transform-origin: 57px 20px;
+            animation-duration: 10s;
+        }
+
+        .circle-1 {
+            height: 70px;
+            width: 70px;
+            transform-origin: 20px 30px;
+            animation-duration: 3s;
+        }
+
+        .circle-2 {
+            height: 20px;
+            width: 20px;
+            transform-origin: -45px 30px;
+            animation-duration: 3s;
+        }
+
+        .circle-3 {
+            height: 25px;
+            width: 25px;
+            transform-origin: -30px 0px;
+            animation-duration: 4s;
+        }
+
+        .circle-4 {
+            height: 21px;
+            width: 21px;
+            transform-origin: 50px 20px;
+            animation-duration: 4s;
+        }
+
+        .circle-5 {
+            height: 28px;
+            width: 28px;
+            transform-origin: -10px 20px;
+            animation-duration: 3s;
+        }
+
+        .circle-6 {
+            height: 18px;
+            width: 18px;
+            transform-origin: -10px 30px;
+            animation-duration: 5s;
+        }
+
+        .circle-7 {
+            height: 22px;
+            width: 22px;
+            transform-origin: 20px 40px;
+            animation-duration: 8s;
+        }
+
+        .circle-8 {
+            height: 27px;
+            width: 27px;
+            transform-origin: 30px 50px;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <div class="circle circle-0"></div>
+            <div class="circle circle-a"></div>
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-5"></div>
+            <div class="circle circle-6"></div>
+            <div class="circle circle-7"></div>
+            <div class="circle circle-8"></div>
+            <div class="circle circle-9"></div>
+        </div>
+    </div>
+</body>
+
+</html>
