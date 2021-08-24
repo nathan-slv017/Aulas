@@ -1,0 +1,346 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes chuva {
+            0% {
+                border: none;
+                top: 0%;
+                left: 0px;
+            }
+
+            70% {
+                background-color: #123eb5;
+            }
+
+            90% {
+                left: 60px;
+                top: 72%;
+            }
+
+            91% {
+                width: 20px;
+                border-radius: 50%;
+            }
+        }
+
+        .container {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 1px 1px 10px black;
+            border-radius: 10px;
+        }
+
+
+        .moon-img {
+            width: 100%;
+            height: 75%;
+            background-color: #1A2238;
+            border-radius: 10px;
+        }
+
+
+        .moon {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #F6EDBD;
+            box-shadow: 0 0 10px 0 #F6EDBD;
+        }
+
+        .cla {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            top: 9px;
+            left: 28px;
+            border-radius: 10px;
+            background: #ECE1A8;
+        }
+
+        .cla:nth-last-child(2) {
+            top: 50px;
+            width: 9px;
+            height: 9px;
+        }
+
+        .cla:nth-last-child(3) {
+            top: 40px;
+            left: 10px;
+            width: 4px;
+            height: 4px;
+        }
+
+        .cla:nth-last-child(4) {
+            top: 60px;
+            width: 6px;
+            height: 6px;
+            left: 20px;
+        }
+
+        .cla:nth-last-child(5) {
+            top: 30px;
+            left: 60px;
+        }
+
+        .cla:nth-last-child(6) {
+            top: 60px;
+            left: 55px;
+            width: 8px;
+            height: 8px;
+        }
+
+        .cla:nth-last-child(7) {
+            top: 45px;
+            left: 45px;
+            width: 10px;
+            height: 10px;
+        }
+
+        .cla:nth-last-child(8) {
+            top: 30px;
+            left: 30px;
+            width: 7px;
+            height: 7px;
+        }
+
+        .clouds {
+            position: absolute;
+            border-radius: 50%;
+            top: 42%;
+            width: 165px;
+            height: 130px;
+            background-color: #303C5D;
+        }
+
+        .clouds:nth-child(2) {
+            position: absolute;
+            border-radius: 50%;
+            top: 42%;
+            left: 50%;
+            width: 200px;
+            height: 130px;
+            background-color: #303C5D;
+        }
+
+        .clouds:nth-child(3) {
+            position: absolute;
+            border-radius: 50%;
+            top: 42%;
+            left: 30%;
+            width: 110px;
+            height: 60px;
+            background-color: #303C5D;
+        }
+
+        .clouds1 {
+            position: absolute;
+            top: 55%;
+            width: 400px;
+            height: 80px;
+            background-color: #303C5D;
+        }
+
+        .chuva1 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+        }
+
+        .chuva2 {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            margin-left: 30px;
+            animation-delay: 0.8s;
+        }
+
+        .chuva3 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.5s;
+        }
+
+        .chuva4 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin-left: 230px;
+            margin-left: 80px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.1s;
+        }
+
+        .chuva5 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            margin-left: 210px;
+            height: 10px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.9s;
+        }
+
+        .chuva6 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin-left: 160px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.5s;
+        }
+
+        .chuva7 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin-left: 190px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.1s;
+        }
+
+        .chuva8 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin-left: 310px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.4s;
+        }
+
+        .chuva9 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin-left: 300px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.2s;
+        }
+
+        .chuva10 {
+            margin-left: 50px;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin-left: 250px;
+            background-color: #1A2238;
+            animation: chuva 1s infinite;
+            animation-delay: 0.3s;
+        }
+
+        /* bar */
+
+        .bar-infor {
+            width: 100%;
+            height: 25%;
+            display: flex;
+        }
+
+        .bar-infor div:first-child {
+            font-size: 40px;
+            font-family: sans-serif;
+            color: 394568;
+            margin: 25px 20px;
+            font-weight: 200;
+        }
+
+        .bar-infor div:nth-child(2) {
+            color: #394568;
+            font-size: 14px;
+            margin: 25px 0px;
+            font-weight: 200;
+        }
+
+        .bar-infor div:nth-child(2) p {
+            margin: 4px 0px;
+            font-weight: 200;
+        }
+
+        .bar-infor div:nth-child(3) {
+            color: #394568;
+            font-size: 14px;
+            margin: 25px 0px;
+            margin-left: 70px;
+            font-weight: 200;
+        }
+
+        .bar-infor div:nth-child(3) p {
+            margin: 4px 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="moon-img">
+            <div class="moon">
+                <div class="cla"></div>
+                <div class="cla"></div>
+                <div class="cla"></div>
+                <div class="cla"></div>
+                <div class="cla"></div>
+                <div class="cla"></div>
+                <div class="cla"></div>
+                <div class="cla"></div>
+            </div>
+            <div class="clouds"></div>
+            <div class="clouds"></div>
+            <div class="clouds"></div>
+            <div class="clouds1"></div>
+            <div class="chuva1"></div>
+            <div class="chuva2"></div>
+            <div class="chuva3"></div>
+            <div class="chuva4"></div>
+            <div class="chuva5"></div>
+            <div class="chuva7"></div>
+            <div class="chuva8"></div>
+            <div class="chuva9"></div>
+            <div class="chuva10"></div>
+        </div>
+        <div class="bar-infor">
+            <div>12°</div>
+            <div>
+                <p>Wind: E 7 km/h</p>
+                <p>Humidity: 87%</p>
+            </div>
+            <div>
+                <p>TUE <b>21°/9°</b></p>
+                <p>WEB <b>23°/10°</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
