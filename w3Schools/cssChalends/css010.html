@@ -1,0 +1,229 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Watch</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .frame {
+            position: absolute;
+            z-index: -100;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 6px;
+            box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: #4c4c4c;
+            color: #333;
+            font-family: "Open Sans", Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            position: relative;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background: #242424;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center::before {
+            content: "";
+            display: block;
+            width: 245px;
+            height: 245px;
+            border-radius: 50%;
+            background: #3a3a3a;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .spinner {
+            width: 218px;
+            height: 218px;
+            border-radius: 50%;
+            position: absolute;
+            transform: rotate(-90deg);
+        }
+
+        circle {
+            stroke: #f85b5b;
+            fill: none;
+            stroke-width: 6px;
+            stroke-dasharray: 684.867;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                stroke-dashoffset: -684.867;
+            }
+
+            50.001% {
+                stroke-dashoffset: 684.867;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .watchFace {
+            font-size: 12px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px dotted white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .date {
+            font-weight: 500px;
+        }
+
+        .time {
+            font-size: 2.5rem;
+            margin: 2px 0;
+        }
+
+        .energyInfo {
+            display: flex;
+            gap: 10px;
+            position: relative;
+            margin-left: 19px;
+        }
+
+        .heart {
+            position: relative;
+        }
+
+        .energyInfo::before,
+        .energyInfo::after {
+            position: absolute;
+            content: "";
+            left: 10px;
+            top: 0;
+            width: 10px;
+            height: 14px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .energyInfo::before {
+            animation: heartbeatLeft 1s infinite linear;
+        }
+
+        .energyInfo::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+            animation: heartbeatRight 1s infinite linear;
+        }
+
+        @keyframes heartbeatLeft {
+            0% {
+                transform: translateX(-20px) rotate(-45deg) scale(1);
+            }
+
+            25% {
+                transform: translateX(-20px) rotate(-45deg) scale(0.8);
+            }
+
+            50% {
+                transform: translateX(-20px) rotate(-45deg) scale(1);
+            }
+
+            100% {
+                transform: translateX(-20px) rotate(-45deg) scale(0.8);
+            }
+        }
+
+        @keyframes heartbeatRight {
+            0% {
+                transform: translateX(-20px) rotate(45deg) scale(1);
+            }
+
+            25% {
+                transform: translateX(-20px) rotate(45deg) scale(0.8);
+            }
+
+            50% {
+                transform: translateX(-20px) rotate(45deg) scale(1);
+            }
+
+            100% {
+                transform: translateX(-20px) rotate(45deg) scale(0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="center">
+
+            <section class='watchFace'>
+
+                <svg class='spinner'>
+                    <circle cx="50%" cy="50%" r="109px" />
+                </svg>
+
+                <p class='date'>MON 15 JAN 2015</p>
+                <h1 class='time'>11:42</h1>
+                <div class='energyInfo'>
+
+                    <div class='heart'>81</div>
+                    <p class='energy'>1248 KCAL</p>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        const dateHtml = document.querySelector('.date');
+        const time = document.querySelector('.time');
+
+        const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+        const mouths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+
+
+        const liveHour = new Date()
+        dateHtml.innerText = ` ${days[liveHour.getUTCDay()]} ${liveHour.getUTCDate()} ${mouths[liveHour.getMonth()]} ${liveHour.getFullYear()}`
+        time.innerText = `${liveHour.getHours()}:${liveHour.getMinutes()}`
+    </script>
+</body>
+
+</html>
