@@ -1,0 +1,116 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+        .container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 480px;
+            background-color: #4cb6de;
+            text-align: center;
+        }
+
+        span {
+            font-size: 1.35rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: white;
+            font-family: "Montserrat Alternates";
+        }
+
+        p {
+            font-weight: 200;
+            position: absolute;
+            color: white;
+            font-size: 26px;
+            left: 40px;
+            top: 360px;
+            font-family: "Montserrat Alternates";
+        }
+
+        #focus {
+            background-color: #286f8a;
+        }
+
+        .text {
+            display: flex;
+            width: 350px;
+            margin: 0 auto;
+            margin-top: 120px;
+        }
+
+        .content-obsession {
+            position: absolute;
+            width: 350px;
+            height: 80px;
+            top: 0px;
+            left: 30px;
+            opacity: 0;
+            transition: all 0.4s;
+        }
+
+        .name {
+            background-color: white;
+            color: #286f8a;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 20px;
+            align-items: center;
+        }
+
+        .content {
+            background-color: #286f8a;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            height: 93px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text">
+            <div class="content-obsession">
+                <div class="name"> [ əbˈsɛʃən ]</div>
+                <div class="content">Obsession, a persistent disturbing preoccupation with an often unreasonable idea or
+                    feeling</div>
+            </div>
+            <span>I know quite certainly that I myself have no special talent; curiosity, <span
+                    id="focus">obsession</span>
+                and dogged
+                endurance,
+                combined with self-criticism have brought me to my ideas.</span>
+        </div>
+        <p>Albert Einstein</p>
+    </div>
+
+    <script>
+        const phase = document.querySelector('#focus');
+        const content = document.querySelector('.content-obsession')
+
+        phase.addEventListener('mouseover', () => {
+            content.style.opacity = '1'
+            content.style.top = '40px'
+        })
+
+        phase.addEventListener('mouseout', () => {
+            content.style.opacity = '0'
+            content.style.top = '0'
+        })
+    </script>
+
+</body>
+
+</html>
