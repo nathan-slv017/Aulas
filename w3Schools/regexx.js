@@ -1,0 +1,4 @@
+// buscas padrões
+// validações
+// substituições
+
