@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 350px;
+            height: 350px;
+            background: #ff9319;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .btn {
+            width: 250px;
+            height: 45px;
+            background: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: whitesmoke;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.185);
+        }
+
+        .btn input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            appearance: none;
+            -webkit-perspective: none;
+        }
+
+        .colors {
+            position: absolute;
+            display: flex;
+            z-index: -2;
+        }
+
+        .colors {
+            width: 30px;
+            height: 30px;
+            background: #ff9319;
+            border-radius: 50px;
+            margin: .6em;
+            border: 4px solid white;
+            transition: all 4s;
+            cursor: pointer;
+            transition-delay: calc(val(--i) * 0.1s);
+            box-shadow: rgba(0, 0, 0, 0.185);
+        }
+
+        .color:nth-child(2) {
+            background: #F037A5;
+        }
+
+        .color:nth-child(3) {
+            background: #3E00FF;
+        }
+
+        .color:nth-child(4) {
+            background: #DA0037;
+        }
+
+        .btn input:checked~.colors .color {
+            transform: translateY(-50px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="btn">
+            <div class="text">
+                <p>Select Theme</p>
+            </div>
+            <input type="checkbox" name="" id="">
+            <div class="colors">
+                <div class="color" style="--j:1"></div>
+                <div class="color" style="--j:2"></div>
+                <div class="color" style="--j:3"></div>
+                <div class="color" style="--j:4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const card = document.querySelector('.card');
+        const color = document.querySelectorAll('.color');
+        const input = document.querySelector('input');
+
+        color.forEach(e => {
+            e.addEventListener('click', e => {
+                card.style.background = window.getComputedStyle(e.target).getPropertyValue("background");
+                input.checked = false
+            })
+        })
+    </script>
+</body>
+
+</html>
