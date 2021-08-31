@@ -15,3 +15,14 @@ const alpha = ['A', 'B', 'C'];
 const cloneAlpha = alpha.slice();
 // ES6 way
 const es6CloneAlpha = [...alpha]
+
+const travel = { Country: 'India', City: 'Mumbai' }
+
+// "Spread"
+const clone1 = { ...travel, Bairro: 'beijin' }
+
+// "Object.assing"
+const clone2 = Object.assign({}, travel)
+
+// "JSON"
+const clone3 = JSON.parse(JSON.stringify(travel))
